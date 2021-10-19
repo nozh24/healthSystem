@@ -1,10 +1,10 @@
 .load {
   margin: 0 auto ;
-  margin-top: 85px;
+  margin-top: 50px;
   width: 100px;
   height: 100px;
   /** height is required as absolute value **/
-  background-color: #F08080;
+  background-color: linear-gradient(326deg, rgba(2,0,36,1) 0%, rgba(242,142,142,0.9360119047619048) 0%, rgba(250,124,124,1) 100%);
   border-radius: 100px;
   position:relative;
   animation: pulse 2000ms linear infinite;

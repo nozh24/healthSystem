@@ -6,12 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
   <script src="script/loader.js"></script>
+ <!-- библа amCharts -->
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+  <script script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+  <!-- скрипты проекта -->
+  <script src="script/person.js"></script>
+  <script src="script/feel.js"></script>
   <!-- подключенная библа иконок fontawesome -->
   <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"> 
   <title>App about Health</title>
 </head>
 <body>
-  <nav class="main_nav">
+  <!-- <nav class="main_nav">
     <div class="main_item item"><a href="#main"><i class="fas fa-home link"></i></a></div>
     <div class="info_item item"><a href="#info"><i class="fas fa-info link"></i></a></div>
     <div class="health_item item"><a href="#health"><i class="fas fa-heartbeat link"></i></a></div>
@@ -67,7 +74,7 @@
       <div class="circle"></div>
       <i class="fas fa-arrow-down arrow" id="arrow_health"></i>
     </div>
-  </section> 
+  </section>  -->
 
 
   <section class="health_section" id="health">
@@ -75,35 +82,67 @@
       <div class="health_board">
         <div class="health_categories">
           <div class="health_categorie main_page">
-
+            <div class="title_categorie"> <a href="#">Главная</a></div>
+            <div class="icon_categorie">
+              <img src="img/main-menu.png" alt="">
+            </div>
           </div>
-          <div class="health_categorie health_page"></div>
-          <div class="health_categorie heart_page"></div>
-          <div class="health_categorie water_page "></div>
-          <div class="health_categorie feel_page"></div>
+          <div class="health_categorie health_page">
+            <div class="title_categorie"> <a href="#">Общее самочувствие</a></div>
+            <div class="icon_categorie">
+              <img src="img/user.png" alt="">
+            </div>
+          </div>
+          <div class="health_categorie heart_page">
+            <div class="title_categorie"> <a href="#">Сердечный пульс</a></div>
+            <div class="icon_categorie">
+              <img src="img/heart_beat.png" width="30" height="30" alt="">
+            </div>
+          </div>
+          <div class="health_categorie water_page ">
+            <div class="title_categorie"> <a href="#">Питьевой режим</a></div>
+            <div class="icon_categorie">
+              <img src="img/water-drop.png" alt="">
+            </div>
+          </div>
+          <div class="health_categorie feel_page">
+            <div class="title_categorie"> <a href="#">Эмоциональное здоровье</a></div>
+            <div class="icon_categorie">
+              <img src="img/bipolar.png" alt="">
+            </div>
+          </div>
         </div>
+        
         <div class="health_current_info">
-          <div class="health_person"></div>
+          <div class="health_person">
+            <div class="health_current_title">Водный баланс</div>
+            <div id="chartdiv" class="health_current_person"></div>
+          </div>
           <div class="health_info">
             <div class="calendar"></div>
             <div class="words"></div>
           </div>
         </div>
         <div class="health_diagrams">
-          <div class="health_diagram health_feel_diagram"></div>
-          <div class="health_diagram health_water_diagram"></div>
+          <div class="health_diagram health_feel_diagram">
+            <div class="health_title">Эмоциональное здоровье</div>
+           
+          </div>
+          <div class="health_diagram health_active_diagram">
+            <div class="health_title">Активность</div>
+            <div class="feel_diagram" id="feel_diagram"></div>
+          </div>
 
           <div class="health_diagram health_heart_diagram">
+            <div class="health_title">Сердцебиение</div>
             <div class="load">
               <i class="fa fa-heartbeat fa-3x"></i>
             </div>
+            <div class="heart_subtitle">102 bpm</div>
           </div>
         </div>
-
       </div>
     </div>
-    
-    
   </section>
   <footer>
   </footer>
