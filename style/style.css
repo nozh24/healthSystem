@@ -14,7 +14,7 @@ body{
 /* ========== Первый экран ========== */
 .bg_section{
   height: 100vh;
-  background: url(img/2mE9.gif) center no-repeat;
+  background: url(/img/2mE9.gif) center no-repeat;
   background-size: 100%;
 }
 .bg_circle {
