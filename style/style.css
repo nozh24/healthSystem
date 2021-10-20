@@ -278,12 +278,11 @@ a{
 
 /* ========== Health system ========== */
 .health_section{
-  height: 100%;
+  height: 100vh;
   position: relative;
   display: flex;
-  background: linear-gradient(198deg, rgb(203, 228, 146) 0%, rgb(243, 188, 236) 42%, rgb(216, 185, 127) 72%, rgb(141, 175, 226) 100%);
-  background-size: 300%; 
-  opacity: .89;
+  background: rgb(164,247,249);
+  background: linear-gradient(143deg, rgba(164,247,249,1) 0%, rgba(255,202,202,1) 48%, rgba(249,238,137,1) 100%);
 }
 .health_board_bg{
   width: 1400px;
@@ -292,8 +291,9 @@ a{
   padding: 20px 30px;
 }
 .health_board{
+  border-radius: 20px;
   background: #fff;
-  margin: 50px 0;
+  margin: 20px 0;
   padding: 60px;
   text-align: center; 
 }
@@ -415,7 +415,7 @@ background: linear-gradient(326deg, rgba(2,0,36,1) 0%, rgba(250,166,214,0.936011
   text-align: left;
   margin-top: 20px;
   margin-left: 20px;
-  font-weight: 600; 
+  font-weight: 500; 
 }
 .health_diagram{
   position: relative;
@@ -427,14 +427,47 @@ background: linear-gradient(326deg, rgba(2,0,36,1) 0%, rgba(250,166,214,0.936011
 }
 
 .health_heart_diagram{
-  background-color: #f8b3b3;
+  background: rgb(0,0,0);
+  background: linear-gradient(143deg, rgba(0,0,0,1) 0%, rgba(250,171,132,1) 0%, rgba(249,137,141,1) 100%);
+}
+.health_water_diagram{
+  background: linear-gradient(326deg, rgba(0,0,0,1) 0%, rgba(167,244,216,1) 0%, rgba(166,224,250,1) 100%);
+}
+.water{
+  width: 100%;
+  height: 70%;
 }
 
-.feel_diagram{
+.active_diagram{
   width: 100%;
   height: 90%;
 }
 .health_active_diagram{
-  background: linear-gradient(326deg, rgba(2,0,36,1) 0%, rgba(242,237,54,0.9360119047619048) 0%, rgba(187,232,167,1) 100%);
+  background: linear-gradient(143deg, rgba(0,0,0,1) 0%, rgba(164,247,249,1) 0%, rgba(249,238,137,1) 100%);
 }
-
+.health_feel_diagram{
+  background: rgb(0,0,0);
+background: linear-gradient(143deg, rgba(0,0,0,1) 0%, rgba(236,215,251,1) 0%, rgba(247,180,221,1) 100%);
+}
+.feel_diagram{
+  margin-top: 10px;
+  width: 100%;
+  height: 80%;
+}
+.health_dinamic_diagram{
+  background: rgb(0,0,0);
+  background: linear-gradient(143deg, rgba(0,0,0,1) 0%, rgba(250,225,132,1) 0%, rgba(241,249,137,1) 100%);
+}
+.dinamic_diagram{
+  width: 100%;
+  height: 90%;
+}
+.health_micro_diagram{
+  background: rgb(0,0,0);
+  background: linear-gradient(143deg, rgba(0,0,0,1) 0%, rgba(213,164,249,1) 0%, rgba(231,249,137,1) 100%);
+}
+.micro_diagram{
+  
+  width: 100%;
+  height: 80%;
+}
