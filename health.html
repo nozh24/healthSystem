@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/health.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="health_section" id="health">
+        <div class="health_board_bg">
+          <div class="health_board">
+            <div class="health_categories">
+              <!-- <div class="health_categorie main_page">
+                <div class="title_categorie"> <a href="#">Главная</a></div>
+                <div class="icon_categorie">
+                  <img src="img/main-menu.png" alt="">
+                </div>
+              </div> -->
+              <div class="health_categorie health_page">
+                <div class="title_categorie"> <a href="#">Общее самочувствие</a></div>
+                <div class="icon_categorie">
+                  <img src="img/user.png" alt="">
+                </div>
+              </div>
+              <div class="health_categorie heart_page">
+                <div class="title_categorie"> <a href="heart.html">Сердечный пульс</a></div>
+                <div class="icon_categorie">
+                  <img src="img/heart_beat.png" width="30" height="30" alt="">
+                </div>
+              </div>
+              <div class="health_categorie water_page ">
+                <div class="title_categorie"> <a href="water.html">Питьевой режим</a></div>
+                <div class="icon_categorie">
+                  <img src="img/water-drop.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="back">
+                <a href="index.html">Назад</a>
+            </div>
+            <div class="health_diagrams">
+              <div class="health_diagram health_active_diagram">
+                <div class="health_title">Личные данные</div>
+                
+                <form class="form_info" id="data_form">
+                    <div class="form_block">
+                      <p class="form_subtitle">Ваш возраст:</p>
+                      <div class="date_group">
+                        <div class="radio">
+                            <input class="custom-radio" type="radio" id="color-1" name="color" value="indigo">
+                            <label for="color-1">12-20</label>
+                          </div>
+                        
+                          <div class="radio">
+                            <input class="custom-radio" type="radio" id="color-2" name="color" value="red">
+                            <label for="color-2">21-35</label>
+                          </div>
+                        
+                          <div class="radio">
+                            <input class="custom-radio" type="radio" id="color-3" name="color" value="brown">
+                            <label for="color-3">36-60</label>
+                          </div>
+                        
+                          <div class="radio">
+                            <input class="custom-radio" type="radio" id="color-4" name="color" value="yellow">
+                            <label for="color-4">61-75</label>
+                          </div>
+                        
+                          <div class="radio">
+                            <input class="custom-radio" type="radio" id="color-5" name="color" value="green">
+                            <label for="color-5">76-90</label>
+                          </div>
+                      </div>
+                      <p class="form_subtitle mtTitle">Ваш вес:</p>
+                      <div class="date_group">
+                        <p><input type="number" name="t" value="40" min="25" max="120" step="1"></p>
+                      </div>
+                      <p class="form_subtitle mtTitle">Ваш рост:</p>
+                      <div class="date_group">
+                        <p><input type="number" name="t" value="50" min="110" max="210" step="1"></p>
+                      </div>
+                    </div>
+                    <div class="error_message" id="error"></div>
+                  </form>
+              </div> 
+              <button type="submit" class="button" id="buttonSubmit" name="buttonSend"> -></button>
+              <div class="health_diagram health_water_diagram">
+                <div class="health_title">Рекомендации</div>
+              </div>     
+            </div>
+          </div>
+        </div>
+      </section>
+    
+</body>
+</html>
