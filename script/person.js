@@ -17,8 +17,8 @@ chart.data = [{
     "name": "Сердцебиение",
     "value": 245
 }, {
-    "name": "Сон",
-    "value": 789
+    "name": "Активность",
+    "value": 589
 }];
 
 var series = chart.series.push(new am4charts.PictorialStackedSeries());

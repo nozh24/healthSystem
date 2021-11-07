@@ -4,7 +4,8 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 .health_section{
-    height: 100%;
+    height: 100vh;
+     align-items: center;
     position: relative;
     display: flex;
     background: rgb(164,247,249);
@@ -101,7 +102,7 @@ body{
 }
   .health_diagram{
     position: relative;
-    height: 600px;
+    height: 500px;
     border-radius: 20px;
 } 
   .health_heart_diagram{
@@ -109,13 +110,13 @@ body{
     background: linear-gradient(143deg, rgba(0,0,0,1) 0%, rgba(250,171,132,1) 0%, rgba(249,137,141,1) 100%);
 }
   .health_water_diagram{
-      width: 70%;
+      width: 60%;
     -webkit-box-shadow: 1px 5px 32px 5px rgba(246, 236, 116, 0.2);
     -moz-box-shadow: 1px 5px 32px 5px rgba(246, 236, 116, 0.2);
     box-shadow: 1px 5px 32px 5px rgba(246, 236, 116, 0.2);
 }
   .health_active_diagram{
-      width: 30%;
+      width: 40%;
     margin-right: 20px;
     -webkit-box-shadow: 1px 5px 32px 5px rgba(246, 236, 116, 0.2);
     -moz-box-shadow: 1px 5px 32px 5px rgba(246, 236, 116, 0.2);
@@ -123,8 +124,9 @@ body{
 }
 /* Человек */
 .health_current_person{
-    height: 500px;
-    width: 50%;
+  display: none;
+  height: 500px;
+  width: 50%;
   }
 
   /* ================= ФОРМА ================= */
@@ -161,17 +163,17 @@ body{
 }
 /* ================= КНОПКА ================= */
 .button{
-  transition: .3s linear;
   border-radius: 50%;
-  background: #ffbe76;
-  width: 50px;
-  height: 50px;
+  background: rgba(78,187,232,0.9360119047619048);
+  width: 55px;
+  height: 55px;
   text-decoration: none;
   transition: .3s linear;
   margin-right: 20px;
+  border:0;
 }
-
-
-/* ================= ФОРМА ================= */
+.button:hover{
+  background: rgba(131,172,210,1);
+}
 
 

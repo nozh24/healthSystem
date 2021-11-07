@@ -10,19 +10,13 @@
   <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
   <script script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
   <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-    <title>Document</title>
+    <title>Water page</title>
 </head>
 <body>
     <section class="health_section" id="health">
         <div class="health_board_bg">
           <div class="health_board">
             <div class="health_categories">
-              <!-- <div class="health_categorie main_page">
-                <div class="title_categorie"> <a href="#">Главная</a></div>
-                <div class="icon_categorie">
-                  <img src="img/main-menu.png" alt="">
-                </div>
-              </div> -->
               <div class="health_categorie health_page">
                 <div class="title_categorie"> <a href="health.html">Общее самочувствие</a></div>
                 <div class="icon_categorie">
@@ -59,16 +53,27 @@
                     <div class="error_message" id="error"></div>
                   </form>
               </div> 
-              <button type="submit" class="button" id="buttonSubmit" name="buttonSend"> -></button>
+              <button type="submit" onclick="openBlock()" class="button" id="buttonSubmit" name="buttonSend">
+                <img src="img/right-arrow.png" alt="">
+              </button>
               <div class="health_diagram health_water_diagram">
-                <div class="health_title">Статистика</div>
-                <p> *календарь*</p>
+                <div class="health_title">Результат</div>
+                <!-- <p> *календарь*</p> -->
                 <div id="chartdiv" class="health_current_person"></div>
               </div>     
             </div>
           </div>
         </div>
       </section>
-    
+    <script>
+      function openBlock(){
+        display = document.getElementById('chartdiv').style.display;
+        if (display == 'none'){
+          document.getElementById('chartdiv').style.display = 'block';
+        }else{
+           document.getElementById('chartdiv').style.display = 'none';
+        }
+      }
+    </script>
 </body>
 </html>

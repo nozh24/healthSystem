@@ -14,7 +14,7 @@ body{
 /* ========== Первый экран ========== */
 .bg_section{
   height: 100vh;
-  background: url(/img/2mE9.gif) center no-repeat;
+  background: url(../img/2mE9.gif) center no-repeat;
   background-size: 100%;
 }
 .bg_circle {
@@ -105,11 +105,11 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
-  margin-left: 200px;
+  align-items: center; 
+  text-align:center;
 }
 .main_title, .main_text{
-  max-width: 800px;
+  max-width: 1000px;
 }
 .main_title{
   display: flex;
@@ -122,7 +122,7 @@ a{
   margin-top: 45px;
   color: #333;
   font-size: 40px;
-  line-height: 1.4em;
+  line-height: 60px;
   font-weight: 500;
 }
 .title_content span{
@@ -303,17 +303,17 @@ a{
   align-items: center;
 }
 .health_categorie{
-  width: 450px;
+  width: 1000px;
   height: 100px;
   margin-right: 20px;
   border-radius: 17px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  transition: .3s;
+  transition: .4s;
 }
 .health_categorie:hover{
-  transform: scale(.9);
+  transform: scale(.95);
 }
 .icon_categorie{
   margin-right: 15px;

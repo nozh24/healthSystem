@@ -4,73 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/health.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style/heart.css">
+    <title>Heart page</title>
 </head>
 <body>
     <section class="health_section" id="health">
-        <div class="health_board_bg">
-          <div class="health_board">
-            <div class="health_categories">
-              <!-- <div class="health_categorie main_page">
-                <div class="title_categorie"> <a href="#">Главная</a></div>
-                <div class="icon_categorie">
-                  <img src="img/main-menu.png" alt="">
-                </div>
-              </div> -->
-              <div class="health_categorie health_page">
-                <div class="title_categorie"> <a href="#">Общее самочувствие</a></div>
-                <div class="icon_categorie">
-                  <img src="img/user.png" alt="">
-                </div>
-              </div>
-              <div class="health_categorie heart_page">
-                <div class="title_categorie"> <a href="heart.html">Сердечный пульс</a></div>
-                <div class="icon_categorie">
-                  <img src="img/heart_beat.png" width="30" height="30" alt="">
-                </div>
-              </div>
-              <div class="health_categorie water_page ">
-                <div class="title_categorie"> <a href="water.html">Питьевой режим</a></div>
-                <div class="icon_categorie">
-                  <img src="img/water-drop.png" alt="">
-                </div>
+      <div class="health_board_bg">
+        <div class="health_board">
+          <div class="health_categories">
+            <div class="health_categorie health_page">
+              <div class="title_categorie"> <a href="health.html">Общее самочувствие</a></div>
+              <div class="icon_categorie">
+                <img src="img/user.png" alt="">
               </div>
             </div>
-            <div class="back">
-                <a href="index.html">Назад</a>
+            <div class="health_categorie heart_page">
+              <div class="title_categorie"> <a href="heart.html">Сердечный пульс</a></div>
+              <div class="icon_categorie">
+                <img src="img/heart_beat.png" width="30" height="30" alt="">
+              </div>
             </div>
-            <div class="health_diagrams">
-              <div class="health_diagram health_active_diagram">
-                <div class="health_title">Ваш пульс</div>
-                
-                <form class="form_info" id="data_form">
-                    <div class="form_block">
-                        <div class="text">
-                            <ul>
-                                <li>Поверните руку ладонью вверх.</li>
-                                <li>Другой рукой обхватите кисть так, чтобы два пальца (указательный, безымянный) лежали на лучевой артерии у основания большого пальца.</li>
-                                <li>Нащупав лучевую артерию, прижмите её, и вы почувствуете пульсовую волну как удар, толчок, движение или увеличение объёма артерии.</li>
-                                <li>Посчитайте количество ударов в течение 30 секунд.</li>
-                            </ul>
-                        </div>
-                      <div class="date_group">
-                        <p><input type="number" name="t" value="30" min="10" max="50" step="1"></p>
-                      </div>
-                    </div>
-                    <div class="error_message" id="error"></div>
-                  </form>
-              </div> 
-              <button type="submit" class="button" id="buttonSubmit" name="buttonSend"> -></button>
-              <div class="health_diagram health_water_diagram">
-                <div class="health_title">Статистика</div>
-                <p> *диаграмма*</p>
-                <p>Текущий пульс: </p>
-              </div>     
+            <div class="health_categorie water_page ">
+              <div class="title_categorie"> <a href="water.html">Питьевой режим</a></div>
+              <div class="icon_categorie">
+                <img src="img/water-drop.png" alt="">
+              </div>
             </div>
           </div>
+          <div class="back">
+              <a href="index.html">Назад</a>
+          </div>
+          <div class="health_diagrams">
+            <div class="health_diagram health_active_diagram">
+              <div class="health_title">Ваш пульс</div>
+              <form class="form_info" id="data_form">
+                  <div class="form_block">
+                    <div class="text">
+                      <p>1. Поверните руку ладонью вверх.</p>
+                      <p>2. Другой рукой обхватите кисть так, чтобы два пальца (указательный, безымянный) лежали на лучевой артерии у основания большого пальца.</p>
+                      <p>3. Нащупав лучевую артерию, прижмите её, и вы почувствуете пульсовую волну как удар, толчок, движение или увеличение объёма артерии.</p>
+                      <p>4. Посчитайте количество ударов в течение 30 секунд.</p>
+                      
+                    </div>
+                  <div class="date_group">
+                    <p>*Введите количество ударов в текстовое поле:</p>
+                    <p><input type="number" name="hits" class="input" value="30" min="10" max="50" step="1"></p>
+                  </div>
+                </div>
+                <div class="error_message" id="error"></div>
+              </form>
+            </div> 
+            <button type="submit" onclick="openBlock()" class="button" id="buttonSubmit" name="buttonSend">
+              <img src="img/right-arrow.png" alt="">
+            </button>
+            <div class="health_diagram health_water_diagram">
+              <div class="health_title">Результат</div>
+              <div class="health_content" id="health_content">
+                <!-- <p> *диаграмма*</p> -->
+                <p class="currentBeat">Текущий пульс: ударов/минуту</p>
+                <p>Минимальный пульс: 60 ударов/минуту </p>
+                <p>Максимальный пульс: 90 ударов/минуту </p>
+                <p class="normal" id="normal"><span>Важно!</span>
+                  Чтобы продлить молодость и быть здоровым человеком, необходимо заниматься спортом, сбалансированно питаться и вовремя проходить обследования.
+                </p>
+                <p class="tachycardia" id="tachycardia"> <span>Важно!</span>
+                  Учащенный пульс возникает при следующих факторах: панической атаки, употребления избыточного количества кофе, употребления алкоголя <br>
+                  Способы понижения: глубокий быстрый вдох и медленный выдох; умывание лица холодной водой.
+                </p>
+                <p class="bradycardia" id="bradycardia"><span>Важно!</span>
+                  Пониженный пульс может быть при: физиологической или патологической брадикардиях, синдроме слабости синусового узла, блокаде проводящих путей <br>
+                  Способы понижения при слабости, головокружении: выпить чашку кофе или крепкого черного чая. 
+                </p>
+              </div>
+            </div>     
+          </div>
         </div>
-      </section>
-    
+      </div>
+    </section>
+    <!-- <script>
+      function openBlock() {
+        display = document.getElementById('health_content').style.display;
+        if (display == 'none') {
+          document.getElementById('health_content').style.display = 'block';
+        } else {
+          document.getElementById('health_content').style.display = 'none';
+        }
+      }
+    </script> -->
+    <script>
+      document.querySelector('.button').addEventListener('click', () =>{
+        let data = document.querySelector('.input').value;
+        let curData = data * 2;
+        let doneData = `Текущий пульс: ${curData} ударов/минуту`;
+        document.querySelector('.currentBeat').innerHTML = doneData;
+        if (curData > 90 ){
+          document.getElementById('tachycardia').style.display = 'block';
+        }
+        else if (curData < 60){
+          document.getElementById('bradycardia').style.display = 'block';
+        }
+        else{
+          document.getElementById('normal').style.display = 'block';
+        }
+      })
+    </script> 
 </body>
 </html>
