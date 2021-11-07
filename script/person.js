@@ -11,14 +11,14 @@ var chart = am4core.create("chartdiv", am4charts.SlicedChart);
 chart.hiddenState.properties.opacity = 0; // this makes initial fade in effect
 
 chart.data = [{
-    "name": "Вода",
+    "name": "Ум",
     "value": 354
 }, {
-    "name": "Сердцебиение",
-    "value": 245
+    "name": "Сердце",
+    "value": 350
 }, {
-    "name": "Активность",
-    "value": 589
+    "name": "Тело",
+    "value": 352
 }];
 
 var series = chart.series.push(new am4charts.PictorialStackedSeries());

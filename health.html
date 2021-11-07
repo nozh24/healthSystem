@@ -32,7 +32,7 @@
             </div>
           </div>
           <div class="back">
-              <a href="index.html">Назад</a>
+              <a href="index.html"><img class="arrow_rotate" src="img/right-arrow.png" alt="На главную страницу"></a>
           </div>
           <div class="health_diagrams">
             <div class="health_diagram health_active_diagram">
@@ -81,6 +81,12 @@
             </button>
             <div class="health_diagram health_water_diagram">
               <div class="health_title">Рекомендации</div>
+              <div class="container" id="container">
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <p>Loading...</p>
+              </div>
               <div class="recom_content" id="recom_content">
                 <p>1. Пейте больше воды. В день необходимо выпивать хотя бы литр.</p>
                 <p>2. Правильное питание. Оно необходимо для нормализации общего состояния организма. Исключите из рациона вредный фастфуд, жирное, выпечку, соленое.</p>
@@ -96,6 +102,7 @@
     </section>
     <script>
       function openBlock() {
+        document.getElementById('container').style.display = 'none';
         display = document.getElementById('recom_content').style.display;
         if (display == 'none') {
           document.getElementById('recom_content').style.display = 'block';

@@ -103,9 +103,12 @@ body {
   -moz-box-shadow: 1px 5px 32px 5px rgba(146, 204, 230, 1);
 }
 /* ========== ССЫЛКА НАЗАД ========== */
-.back {
-  text-align: left;
-  margin-top: 20px;
+.back{
+    text-align: left;
+    margin-top: 20px;
+}
+.arrow_rotate{
+  transform: rotate(180deg);
 }
 /* ========== Диаграммы ========== */
 .health_diagrams {
@@ -219,9 +222,9 @@ body {
   border: 1px solid #000;
   text-align: center;
 }
-.health_content {
-  /* display: none; */
-}
+/* .health_content {
+  display: none; 
+} */
 .health_content p {
   text-align: left;
   font-size: 20px;

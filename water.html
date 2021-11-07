@@ -37,27 +37,29 @@
               </div>
             </div>
             <div class="back">
-                <a href="index.html">Назад</a>
+              <a href="index.html"><img class="arrow_rotate" src="img/right-arrow.png" alt="На главную страницу"></a>
             </div>
             <div class="health_diagrams">
               <div class="health_diagram health_active_diagram">
-                <div class="health_title">Объем выпитой жидкости</div>
-                
+                <div class="health_title">Объем выпитой жидкости (в мл.)</div>
                 <form class="form_info" id="data_form">
-                    <div class="form_block">
-                      
-                      <div class="date_group">
-                        <p><input type="number" name="t" value="30" min="10" max="50" step="1"></p>
-                      </div>
-                    </div>
-                    <div class="error_message" id="error"></div>
-                  </form>
+                  <p class="water_drink"> *Подразумевается количество выпитой воды в течение дня, не учитывая другие напитки (кофе, чай, соки и т.д.)</p>  
+                  <p></p>         
+                  <p><input type="number" name="hits" class="input" value="600" min="500" max="3500" step="1"></p>
+                  <p class="water_drink">Данная диаграмма формирует процент из определенных запрограммрованных формул. Она демонстрирует распределение поступающей жидкости между органами. </p>
+                </form>
               </div> 
               <button type="submit" onclick="openBlock()" class="button" id="buttonSubmit" name="buttonSend">
                 <img src="img/right-arrow.png" alt="">
               </button>
               <div class="health_diagram health_water_diagram">
                 <div class="health_title">Результат</div>
+                <div class="container" id="container">
+                  <div class="ring"></div>
+                  <div class="ring"></div>
+                  <div class="ring"></div>
+                  <p>Loading...</p>
+                </div>
                 <!-- <p> *календарь*</p> -->
                 <div id="chartdiv" class="health_current_person"></div>
               </div>     
@@ -67,6 +69,7 @@
       </section>
     <script>
       function openBlock(){
+        document.getElementById('container').style.display = 'none';
         display = document.getElementById('chartdiv').style.display;
         if (display == 'none'){
           document.getElementById('chartdiv').style.display = 'block';
